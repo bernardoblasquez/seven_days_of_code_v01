@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "files": ["./node_modules/wmr/types.d.ts"],
+    "plugins": [
+        { "name": "typescript-plugin-css-modules" }
+    ],
     "lib": [
       "dom",
       "dom.iterable",
