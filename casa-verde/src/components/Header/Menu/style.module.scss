@@ -1,14 +1,16 @@
-// fonts
-// color
-// active
+// trabalhar BEM 
+// Nenu, __list, __item, __link
 
-.menu-list{
-   display:flex;
-   flex-wrap: nowrap;
-   justify-content: flex-end;
-   align-items: flex-end;
+.menu{
 
-   li{
+   &__list{
+      display:flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: flex-end;
+   }
+
+   &__item{
       margin-left:20px;
       display: inline-block;
 
@@ -24,10 +26,36 @@
       }
    }
 
-   a, a:active, a:visited{
+   &__link{
       text-decoration: none;
+      font-weight: 600;
       font-family: 'Montserrat', sans-serif;
       color: #202020;
-      font-size: 16px
+      font-size: 16px;
+      transition: 0.3s;
+
+      &:active, 
+      &:visited{
+         @extend .menu__link;
+      }
+
+      &:hover{
+         transition: 0.3s;
+         color: #6d8171
+      }
    }
+
+}
+
+.menu-list{
+   display:flex;
+   flex-wrap: nowrap;
+   justify-content: flex-end;
+   align-items: flex-end;
+
+   
+
+   
+
+   
 }
