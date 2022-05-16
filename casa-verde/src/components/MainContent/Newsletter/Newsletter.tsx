@@ -18,8 +18,12 @@ export function Newsletter (){
          das novidades da marca.
          </p>
          <form action="" className={styles["newsletter__subscribe-form"]}>
-            <input type="text" />
-            <button>Assinar newsletter</button>
+            <input 
+               type="text"
+               placeholder="Insira seu e-mail"
+               className={styles["newsletter__input"]} 
+            />
+            <button className={styles["newsletter__button"]}>Assinar newsletter</button>
          </form>
 
       </section>
