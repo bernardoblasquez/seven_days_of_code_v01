@@ -4,6 +4,8 @@
 .menu{
 
    &__list{
+      position: relative;
+      z-index: 200;
       display:flex;
       flex-wrap: nowrap;
       justify-content: flex-end;
@@ -52,10 +54,4 @@
    flex-wrap: nowrap;
    justify-content: flex-end;
    align-items: flex-end;
-
-   
-
-   
-
-   
 }
