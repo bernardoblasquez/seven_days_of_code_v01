@@ -1,0 +1,109 @@
+@mixin bg-plant-position($left, $top, $plantName){
+   background-repeat: no-repeat;
+   background-position: $left $top; 
+   background-image: url('../../images/plants/' + $plantName);
+}
+
+.plantSales{
+   max-width: 1200px;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   margin-top: 48px;
+
+   &__title{
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.375rem;
+      color: #8D8D8D;
+      text-align: center;
+   }
+
+   &__main-title{
+      display: block;
+      font-family: 'Elsie Swash Caps', cursive;
+      font-size: 5.125rem;
+      line-height: 6rem;
+      color: #202020;
+      margin-top: 1.5rem
+   }
+}
+
+.plantSaleBox{
+   display: flex;
+   gap: 30px;
+   flex-wrap: wrap;
+   margin-bottom: 40px;
+   
+   &__item{
+      height: 200px;
+      width: 379px;
+      padding-left: 204px;
+      border-radius: 0px;
+      background-color: white;
+      box-shadow: 10px 10px 30px 0px #0000000F;
+
+      &--ajuga{
+         @extend .plantSaleBox__item;
+         @include bg-plant-position(-15px, 0, "ajuga.png");
+      }
+
+      &--cordyline{
+         @extend .plantSaleBox__item;
+         @include bg-plant-position(-15px, 0, "cordyline.png");
+      }
+
+      &--crassula{
+         @extend .plantSaleBox__item;
+         @include bg-plant-position(-15px, 0, "crassula.png");
+      }
+
+      &--cyperus{
+         @extend .plantSaleBox__item;
+         @include bg-plant-position(-15px, 0, "cyperus.png");
+      }
+
+      &--datura{
+         @extend .plantSaleBox__item;
+         @include bg-plant-position(-15px, 0, "datura.png");
+      }
+
+      &--delairea{
+         @extend .plantSaleBox__item;
+         @include bg-plant-position(-15px, 0, "delairea.png");
+      }
+   }
+
+   &__title{
+      display: block;
+      font-family: 'Elsie Swash Caps', cursive;
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 37px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #202020;
+      margin-top: 1.5rem;
+   }
+
+   &__prize{
+      display: block;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #8D8D8D;
+      margin-top: 0.5rem;
+   }
+
+   &__buy-link{
+      display: block;
+      color: rgba(255, 203, 71, 1);
+      margin-top: 1.5rem;
+      text-decoration: none;
+      overflow: hidden;
+   }
+}
+
